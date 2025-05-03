@@ -1,7 +1,26 @@
-echo "# Predpisy-01" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Patkopatko/Predpisy-01.git
-git push -u origin main
+{
+  "objectType": "Pozemok",
+  "attributes": {
+    "nazov": "string",
+    "vlastnik": "string",
+    "lokalita": {
+      "adresa": "string",
+      "katastralneUzemie": "string",
+      "parcelneCislo": "string"
+    },
+    "vymera_m2": "number",
+    "typ_pozemku": "string",
+    "ucel_vyuzitia": "string",
+    "stav": "string",
+    "obmedzenia": ["string"],
+    "cena": {
+      "hodnota": "number",
+      "mena": "string"
+    },
+    "datum_poslednej_zmeny": "string"
+  },
+  "relations": {
+    "susedne_pozemky": ["Pozemok"],
+    "stavby_na_pozemku": ["Stavba"]
+  }
+}
